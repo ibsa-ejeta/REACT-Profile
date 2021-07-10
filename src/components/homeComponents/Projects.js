@@ -10,14 +10,6 @@ import {
   CardActions,
   Paper,
 } from "@material-ui/core";
-// import CardContent from "@material-ui/core/CardContent";
-// import CardMedia from "@material-ui/core/CardMedia";
-// import StarBorderIcon from "@material-ui/icons/StarBorder";
-// import ImageList from "@material-ui/core/ImageList";
-// import ImageListItem from "@material-ui/core/ImageListItem";
-// import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-// import IconButton from "@material-ui/core/IconButton";
-// import { CardActions } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
 
