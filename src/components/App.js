@@ -40,20 +40,12 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
-        <Route path={process.env.PUBLIC_URL + "/blog"} exact component={Blog} />
-        <Route
-          path={process.env.PUBLIC_URL + "/Landing_Page"}
-          exact
-          component={Landing}
-        />
-        <Route
-          path="/REACT-Profile/Technical_Documentation"
-          exact
-          component={Technical}
-        />
-        <Route path="/REACT-Profile/Survey_Form" exact component={Survey} />
-        <Route path="/REACT-Profile/Tribute_Page" exact component={Tribute} />
+        <Route path="/" exact component={Home} />
+        <Route path="/blog" exact component={Blog} />
+        <Route path="/Landing_Page" exact component={Landing} />
+        <Route path="/Technical_Documentation" exact component={Technical} />
+        <Route path="/Survey_Form" exact component={Survey} />
+        <Route path="/Tribute_Page" exact component={Tribute} />
       </BrowserRouter>
     </ThemeProvider>
   );
