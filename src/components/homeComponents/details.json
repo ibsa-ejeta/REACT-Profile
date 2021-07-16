@@ -19,7 +19,7 @@
   },
   {
     "key": 3,
-    "images": "./images/Nikola-Tesla.png",
+    "images": "/images/Nikola-Tesla.png",
     "alts": "tribute",
     "urls": "https://github.com/ibsa-ejeta/tribute_page",
     "sites": "/Tribute_Page",
