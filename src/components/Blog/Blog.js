@@ -5,7 +5,7 @@ import Footer from "../sharedComponents/Footer";
 import Bloghome from "./Bloghome";
 import Blogcompose from "./Blogcompose";
 import Blogabout from "./Blogabout";
-import "./Blogstyles.css";
+
 import { Container } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import CreateIcon from "@material-ui/icons/Create";
