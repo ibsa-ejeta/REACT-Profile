@@ -39,7 +39,7 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <HashRouter>
+      <BrowserRouter>
         <Route path="/REACT-Profile" exact component={Home} />
         <Route path="/REACT-Profile/blog" exact component={Blog} />
         <Route path="/REACT-Profile/Landing_Page" exact component={Landing} />
@@ -50,7 +50,7 @@ const App = () => {
         />
         <Route path="/REACT-Profile/Survey_Form" exact component={Survey} />
         <Route path="/REACT-Profile/Tribute_Page" exact component={Tribute} />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
