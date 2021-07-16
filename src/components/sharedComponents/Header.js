@@ -192,7 +192,7 @@ const Header = (props) => {
 
   const getMenuButtons = () => {
     return (
-      <>
+      <Fragment>
         <Link to={path1} className={headerLink}>
           {icon1}&nbsp;&nbsp;
           {first}
@@ -209,7 +209,7 @@ const Header = (props) => {
           {icon4}&nbsp;&nbsp;
           {fourth}
         </Link>
-      </>
+      </Fragment>
     );
   };
 
