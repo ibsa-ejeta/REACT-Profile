@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Router, Switch } from "react-router-dom";
 import Home from "./homeComponents/Home";
 import Tribute from "./Tribute/Tribute";
 import Landing from "./Landing/Landing";
@@ -33,18 +33,20 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Route path="/REACT-Profile" exact component={Home} />
-        <Route path="/REACT-Profile/blog" exact component={Blog} />
-        <Route path="/REACT-Profile/Landing_Page" exact component={Landing} />
-        <Route
-          path="/REACT-Profile/Technical_Documentation"
-          exact
-          component={Technical}
-        />
-        <Route path="/REACT-Profile/Survey_Form" exact component={Survey} />
-        <Route path="/REACT-Profile/Tribute_Page" exact component={Tribute} />
-      </BrowserRouter>
+      <Router>
+        <Switch>
+          <Route path="/REACT-Profile" exact component={Home} />
+          <Route path="/REACT-Profile/blog" exact component={Blog} />
+          <Route path="/REACT-Profile/Landing_Page" exact component={Landing} />
+          <Route
+            path="/REACT-Profile/Technical_Documentation"
+            exact
+            component={Technical}
+          />
+          <Route path="/REACT-Profile/Survey_Form" exact component={Survey} />
+          <Route path="/REACT-Profile/Tribute_Page" exact component={Tribute} />
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 };
