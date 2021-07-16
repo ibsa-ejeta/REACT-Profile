@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
+import { Fragment } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -166,7 +167,7 @@ const Header = (props) => {
 
   const getDrawerChoices = () => {
     return (
-      <>
+      <Fragment>
         <Link to={path1} className={menuDownButton}>
           {first}
         </Link>
@@ -179,7 +180,7 @@ const Header = (props) => {
         <Link to={path4} className={menuDownButton}>
           {fourth}
         </Link>
-      </>
+      </Fragment>
     );
   };
 
