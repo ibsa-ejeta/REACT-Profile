@@ -17,21 +17,23 @@ const useStyles = makeStyles(() => ({}));
 const Home = () => {
   const classes = useStyles();
   return (
-    <div>
+    <Container className="homePage">
       <Header
-        pageLogo="Ibsa Portfolio"
+        pageLogo="Ibsa"
         first="Home"
         second="Projects"
         third="Contact"
-        icon1={<HomeIcon fontSize="large" />}
-        icon2={<AccountTreeIcon fontSize="large" />}
-        icon3={<ContactMailIcon fontSize="large" />}
+        icon1={<HomeIcon fontSize="small" />}
+        icon2={<AccountTreeIcon fontSize="small" />}
+        icon3={<ContactMailIcon fontSize="small" />}
         path1="#"
         path2="#projects"
         path3="#contact"
+        imgAlt="Ibsa Ejeta"
+        imgSrc="/images/ibsa.JPG"
       />
       <Introduction />
-      <Container id="projects" className={classes.container}>
+      <Container id="projects">
         {details.map((detail) => (
           <Projects
             keys={detail.key}
@@ -47,7 +49,7 @@ const Home = () => {
       <Contactinfo />
 
       <Footer />
-    </div>
+    </Container>
   );
 };
 

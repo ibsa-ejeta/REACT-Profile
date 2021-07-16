@@ -15,8 +15,6 @@ import {
 const TechnicalTable = () => {
   return (
     <Paper>
-      <Typography variant="h5">JS Documentation</Typography>
-
       <MenuList>
         <MenuItem href="#Introduction">Introduction</MenuItem>
         <MenuItem href="#What_you_should_already_know">

@@ -4,9 +4,12 @@ import {
   Typography,
   makeStyles,
   Button,
+  Avatar,
   IconButton,
   Drawer,
   MenuItem,
+  Box,
+  Grid,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
@@ -17,24 +20,29 @@ const useStyles = makeStyles(() => ({
   header: {
     paddingRight: "79px",
     paddingLeft: "118px",
-    "@media (max-width: 900px)": {
+    "@media (max-width: 1200px)": {
       paddingLeft: 0,
     },
   },
-  logo: {
-    fontFamily: "Work Sans, sans-serif",
-    fontWeight: 600,
-    color: "#FFFEFE",
-    textAlign: "left",
-  },
+
   headerLink: {
     fontFamily: "Open Sans, sans-serif",
-    fontWeight: 700,
-    fontSize: "23px",
+    fontWeight: 400,
+    fontSize: "20px",
     marginLeft: "50px",
+    textDecoration: "none",
+    color: "#fff",
+    "&:hover": {
+      color: "grey",
+      textDecoration: "none",
+    },
   },
   menuDownButton: {
     display: "block",
+    color: "#000",
+    textDecoration: "none",
+    fontSize: "20px",
+    marginBottom: "1.5rem",
   },
   toolbar: {
     display: "flex",
@@ -62,6 +70,8 @@ const Header = (props) => {
     path2,
     path3,
     path4,
+    imgAlt,
+    imgSrc,
   } = props;
 
   const [state, setState] = useState({
@@ -73,7 +83,7 @@ const Header = (props) => {
 
   useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 900
+      return window.innerWidth < 1200
         ? setState((prevState) => ({ ...prevState, mobileView: true }))
         : setState((prevState) => ({ ...prevState, mobileView: false }));
     };
@@ -89,9 +99,32 @@ const Header = (props) => {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className={toolbar}>
-        {pageLogo}
-        <div>{getMenuButtons()}</div>
+      <Toolbar className="toolbar">
+        <Grid container>
+          <Grid
+            item
+            container
+            direction="row"
+            justifyContent="flex-start"
+            sm={4}
+          >
+            <Avatar alt={imgAlt} src={imgSrc} />
+            &nbsp;&nbsp;
+            <Typography variant="h5" align="center">
+              {pageLogo}
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            direction="row"
+            justifyContent="flex-end"
+            sm={8}
+            alignContent="center"
+          >
+            {getMenuButtons()}
+          </Grid>
+        </Grid>
       </Toolbar>
     );
   };
@@ -151,8 +184,8 @@ const Header = (props) => {
   };
 
   const headerLogo = (
-    <Typography variant="h4" component="h1" className={logo}>
-      Journal
+    <Typography variant="h5" component="h5">
+      {pageLogo}
     </Typography>
   );
 

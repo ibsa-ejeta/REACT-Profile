@@ -9,6 +9,8 @@ import {
   CardMedia,
   CardActions,
   Paper,
+  Box,
+  Container,
 } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
@@ -17,10 +19,10 @@ import LanguageIcon from "@material-ui/icons/Language";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
+  homePaper: {
     paddingTop: "3rem",
     marginTop: "3rem",
-    marginBottom: "3rem",
+    marginBottom: "5rem",
   },
 
   img: {
@@ -36,12 +38,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "3rem",
     textAlign: "center",
     alignItems: "center",
+    borderStyle: "none",
+
+    boxShadow: "none",
   },
   projectButton: {
     // justifyContent: "center",
-    // marginLeft: "10rem",
-    // marginRight: "2rem",
-    marginLeft: "auto",
+    marginBottom: "2rem",
+    marginRight: "2rem",
   },
 }));
 
@@ -79,31 +83,34 @@ const Projects = (props) => {
         <Typography variant="body1" color="textSecondary" paragraph>
           {projectDescription}
         </Typography>
-
-        <CardActions className={classes.projectButton}>
+        <Box>
           <Button
+            className={classes.projectButton}
             href={sites}
             target="_blank"
             rel="noopener noreferrer"
             type="Link"
             variant="contained"
             color="primary"
+            component="button"
           >
-            <LanguageIcon fontSize="large" />
+            <LanguageIcon />
             &nbsp;&nbsp;&nbsp;Visit Site
           </Button>
 
           <Button
+            className={classes.projectButton}
             href={urls}
             target="_blank"
             rel="noreferrer"
             variant="contained"
             color="primary"
+            component="button"
           >
-            <GitHubIcon fontSize="large" />
+            <GitHubIcon />
             &nbsp;&nbsp;&nbsp;GitHub-Repo
           </Button>
-        </CardActions>
+        </Box>
       </Card>
     </Grid>
   );
@@ -121,8 +128,10 @@ const Projects = (props) => {
   );
   if (keys % 2 === 0 && windowDimensions.width > 960) {
     return (
-      <Paper elevation={3} className={classes.paper}>
+      <Paper justify="center" className={classes.homePaper} elevation={6}>
         <Grid
+          component="div"
+          raised
           container
           alignItems="center"
           alignContent="center"
@@ -137,8 +146,10 @@ const Projects = (props) => {
   }
 
   return (
-    <Paper elevation={5} className={classes.paper}>
+    <Paper justify="center" className={classes.homePaper} elevation={6}>
       <Grid
+        component="div"
+        raised
         container
         alignItems="center"
         alignContent="center"

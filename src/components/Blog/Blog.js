@@ -6,14 +6,14 @@ import Bloghome from "./Bloghome";
 import Blogcompose from "./Blogcompose";
 import Blogabout from "./Blogabout";
 import "./Blogstyles.css";
-import { Grid, Container, Typography, makeStyles } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import CreateIcon from "@material-ui/icons/Create";
 import InfoIcon from "@material-ui/icons/Info";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 const Blog = () => {
   return (
-    <div>
+    <Container className="blogPage">
       <BrowserRouter>
         <Header
           pageLogo="Journal"
@@ -21,10 +21,10 @@ const Blog = () => {
           second="Compose"
           third="About"
           fourth="Log In"
-          icon1={<HomeIcon fontSize="large" />}
-          icon2={<CreateIcon fontSize="large" />}
-          icon3={<InfoIcon fontSize="large" />}
-          icon4={<LockOpenIcon fontSize="large" />}
+          icon1={<HomeIcon fontSize="small" />}
+          icon2={<CreateIcon fontSize="small" />}
+          icon3={<InfoIcon fontSize="small" />}
+          icon4={<LockOpenIcon fontSize="small" />}
           path1="/blog"
           path2="/blog/compose"
           path3="/blog/about"
@@ -36,7 +36,7 @@ const Blog = () => {
 
         <Footer />
       </BrowserRouter>
-    </div>
+    </Container>
   );
 };
 

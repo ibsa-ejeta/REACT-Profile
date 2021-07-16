@@ -7,22 +7,26 @@ import Landing from "./Landing/Landing";
 import Survey from "./Survey/Survey";
 import Technical from "./Technical/Technical";
 import Blog from "./Blog/Blog";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+
+import { createTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core";
 import { purple } from "@material-ui/core/colors";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#fefefe",
-    },
-    secondary: purple,
-  },
+const theme = createTheme({
+  // palette: {
+  //   primary: {
+  //     main: "#fefefe",
+  //   },
+  //   secondary: purple,
+  // },
   typography: {
     fontFamily: "Quicksand",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
     fontWeightBold: 700,
+
+    fontSize: 20,
   },
 });
 
