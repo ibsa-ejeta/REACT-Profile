@@ -42,7 +42,11 @@ const App = () => {
       <BrowserRouter>
         <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
         <Route path={process.env.PUBLIC_URL + "/blog"} exact component={Blog} />
-        <Route path="/REACT-Profile/Landing_Page" exact component={Landing} />
+        <Route
+          path={process.env.PUBLIC_URL + "/Landing_Page"}
+          exact
+          component={Landing}
+        />
         <Route
           path="/REACT-Profile/Technical_Documentation"
           exact
