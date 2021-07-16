@@ -34,7 +34,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Route path="/" exact component={Home} />
+        <Route path="/REACT-Profile" exact component={Home} />
         <Route path="/blog" exact component={Blog} />
         <Route path="/Landing_Page" exact component={Landing} />
         <Route path="/Technical_Documentation" exact component={Technical} />
