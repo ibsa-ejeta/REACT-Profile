@@ -33,7 +33,7 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path="/REACT-Profile" exact component={Home} />
         <Route path="/REACT-Profile/blog" exact component={Blog} />
         <Route path="/REACT-Profile/Landing_Page" exact component={Landing} />
