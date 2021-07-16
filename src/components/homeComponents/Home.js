@@ -4,7 +4,6 @@ import Introduction from "./Introduction";
 import Projects from "./Projects";
 import Contactinfo from "./Contactinfo";
 import Footer from "../sharedComponents/Footer";
-import "./Styles.css";
 import { Grid, Container, Paper, makeStyles } from "@material-ui/core";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import HomeIcon from "@material-ui/icons/Home";
