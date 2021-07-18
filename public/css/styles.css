@@ -1,15 +1,90 @@
 
 
 /* home page styles */
-/* .homePage {
-    background-color: red;
-} */
+.homePage {
+    /* background-color: red; */
+}
+ .homeIntroduction, .homePage {
+   
+    padding-top: 4rem;
+    text-align: center;
+    
+    background-color: yellow;
+    
+  }
+  .homeIntroduction {
+      height: 100vh;
+      padding-top: 15rem;
+      padding-left: 3rem;
+  }
+  .homeHeader {
+    background-color: yellow;
+    color: black;
+    box-shadow: none;
+    padding-right: 5rem;
+    padding-left: 6rem;
+    padding: 1rem 5rem 1rem 6rem;
+
+    /* paddingRight: "79px",
+    paddingLeft: "118px",
+    paddingTop: "1rem",
+    paddingBottom: "1rem",
+    "@media (max-width: 1200px)": {
+      paddingLeft: 0,
+    }, */
+
+  }
+  .projectCard {
+      background-color:lightgreen;
+  }
+  .homeFooter {
+      color: black;
+      background-color: yellow;
+      height: 4rem;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+  }
+
+  /* .projectContact{
+    padding-top: 9rem;
+    text-align: center;
+  } */
 
 /* blog page styles */
 .blogPage {
-    background-color: yellow;
+    background-color: #FFD523;
+    height: 90vh;
 }
+.blogFooter {
+    color: black;
+    background-color: green;
+    height: 4rem;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+}
+.blogHeader {
+    background-color: green;
+    color: black;
+    box-shadow: none;
+
+}
+/* header: {
+    backgroundColor: "yellow",
+    color: "black",
+    boxShadow: "none",
+    paddingRight: "79px",
+    paddingLeft: "118px",
+    paddingTop: "1rem",
+    paddingBottom: "1rem",
+    "@media (max-width: 1200px)": {
+      paddingLeft: 0,
+    },
+  }, */
 /* landing page styles */
 /* tribute page styles */
 /* landing page styles */
 /* survey page styles */
+
+/* footer styles */

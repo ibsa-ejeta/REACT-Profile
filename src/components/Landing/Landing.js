@@ -5,7 +5,7 @@ import LandingPrice from "./LandingPrice";
 import SignIn from "./SignIn";
 import Footer from "../sharedComponents/Footer";
 import ListIcon from "@material-ui/icons/List";
-import { Container, makeStyles } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
 const Landing = () => {
   const classes = useStyles();
   return (
-    <Container>
+    <React.Fragment>
       <Header
         pageLogo="Landing Page"
         first="FEATURES"
@@ -42,11 +42,13 @@ const Landing = () => {
         imgAlt="Trombone"
         imgSrc="<FlightLandIcon/>"
       />
-      <LandingBody />
-      <LandingPrice />
-      <SignIn />
+      <Box>
+        <LandingBody />
+        <LandingPrice />
+        <SignIn />
+      </Box>
       <Footer />
-    </Container>
+    </React.Fragment>
   );
 };
 

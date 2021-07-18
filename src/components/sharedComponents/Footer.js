@@ -1,16 +1,27 @@
 import React from "react";
-import { Container, Typography } from "@material-ui/core";
+import { Box, Typography, makeStyles } from "@material-ui/core";
+const useStyles = makeStyles(() => ({
+  footer: {
+    bottom: 0,
 
-const Footer = () => {
+    height: "4rem",
+    left: 0,
+    width: "100%",
+    backgroundColor: "aqua",
+  },
+}));
+
+const Footer = (props) => {
+  const classes = useStyles();
   const date = new Date();
   const copyRight = ` © Ibsa Ejeta ${date.toString().slice(10, 15)}`;
 
   return (
-    <Container>
+    <Box className={`${props.className}`}>
       <Typography variant="h5" align="center" gutterBottom>
         {copyRight}
       </Typography>
-    </Container>
+    </Box>
   );
 };
 

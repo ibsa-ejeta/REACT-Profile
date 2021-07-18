@@ -23,13 +23,14 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "3rem",
     marginTop: "3rem",
     marginBottom: "5rem",
+    backgroundColor: "lightgreen",
   },
 
   img: {
     width: "20em",
     height: "30em",
     margin: 12,
-    minHeight: "60vh",
+    minHeight: "70vh",
     marginRight: "auto",
     marginLeft: "auto",
     borderRadius: 2,
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     alignItems: "center",
     borderStyle: "none",
-
+    backgroundColor: "lightgreen",
     boxShadow: "none",
   },
   projectButton: {

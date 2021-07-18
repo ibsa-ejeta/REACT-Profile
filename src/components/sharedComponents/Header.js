@@ -13,26 +13,29 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { useState, useEffect } from "react";
-import { Fragment } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 
 const useStyles = makeStyles(() => ({
-  header: {
-    paddingRight: "79px",
-    paddingLeft: "118px",
-    "@media (max-width: 1200px)": {
-      paddingLeft: 0,
-    },
-  },
+  // header: {
+  //   backgroundColor: "yellow",
+  //   color: "black",
+  //   boxShadow: "none",
+  //   paddingRight: "79px",
+  //   paddingLeft: "118px",
+  //   paddingTop: "1rem",
+  //   paddingBottom: "1rem",
+  //   "@media (max-width: 1200px)": {
+  //     paddingLeft: 0,
+  //   },
+  // },
 
   headerLink: {
     fontFamily: "Open Sans, sans-serif",
     fontWeight: 400,
     fontSize: "20px",
-    marginLeft: "50px",
+    marginLeft: "5rem",
     textDecoration: "none",
-    color: "#fff",
+    color: "black",
     "&:hover": {
       color: "grey",
       textDecoration: "none",
@@ -55,8 +58,15 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Header = (props) => {
-  const { header, logo, headerLink, menuDownButton, toolbar, drawerContainer } =
-    useStyles();
+  const {
+    homeHeader,
+    header,
+    logo,
+    headerLink,
+    menuDownButton,
+    toolbar,
+    drawerContainer,
+  } = useStyles();
   const {
     pageLogo,
     first,
@@ -100,15 +110,9 @@ const Header = (props) => {
 
   const displayDesktop = () => {
     return (
-      <Toolbar className="toolbar">
+      <Toolbar className={`${props.classHeader}`}>
         <Grid container>
-          <Grid
-            item
-            container
-            direction="row"
-            justifyContent="flex-start"
-            sm={4}
-          >
+          <Grid item container sm={2} justifyContent="center" component="div">
             <Avatar alt={imgAlt} src={imgSrc} />
             &nbsp;&nbsp;
             <Typography variant="h5" align="center">
@@ -118,9 +122,8 @@ const Header = (props) => {
           <Grid
             item
             container
-            direction="row"
             justifyContent="flex-end"
-            sm={8}
+            sm={10}
             alignContent="center"
           >
             {getMenuButtons()}
@@ -137,7 +140,7 @@ const Header = (props) => {
       setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
     return (
-      <Toolbar>
+      <Toolbar className={`${props.classHeader}`}>
         <IconButton
           {...{
             edge: "start",
@@ -167,7 +170,7 @@ const Header = (props) => {
 
   const getDrawerChoices = () => {
     return (
-      <Fragment>
+      <React.Fragment>
         <Link to={path1} className={menuDownButton}>
           {first}
         </Link>
@@ -180,7 +183,7 @@ const Header = (props) => {
         <Link to={path4} className={menuDownButton}>
           {fourth}
         </Link>
-      </Fragment>
+      </React.Fragment>
     );
   };
 
@@ -192,7 +195,7 @@ const Header = (props) => {
 
   const getMenuButtons = () => {
     return (
-      <Fragment>
+      <React.Fragment>
         <Link to={path1} className={headerLink}>
           {icon1}&nbsp;&nbsp;
           {first}
@@ -209,16 +212,16 @@ const Header = (props) => {
           {icon4}&nbsp;&nbsp;
           {fourth}
         </Link>
-      </Fragment>
+      </React.Fragment>
     );
   };
 
   return (
-    <header>
-      <AppBar className={header}>
+    <Box>
+      <AppBar elevation={0}>
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
-    </header>
+    </Box>
   );
 };
 
