@@ -18,7 +18,6 @@ const LandingPrice = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      spacing={3}
     >
       <Grid item xs={12} md={6} lg={4}>
         <Typography>TENOR TROMBONE</Typography>

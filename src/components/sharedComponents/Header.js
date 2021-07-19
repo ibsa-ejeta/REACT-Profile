@@ -48,13 +48,13 @@ const useStyles = makeStyles(() => ({
     fontSize: "20px",
     marginBottom: "1.5rem",
   },
-  toolbar: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  drawerContainer: {
-    padding: "20px 30px",
-  },
+  // toolbar: {
+  //   display: "flex",
+  //   justifyContent: "space-between",
+  // },
+  // drawerContainer: {
+  //   padding: "20px 30px",
+  // },
 }));
 
 const Header = (props) => {
@@ -217,8 +217,8 @@ const Header = (props) => {
   };
 
   return (
-    <Box>
-      <AppBar elevation={0}>
+    <Box component="div">
+      <AppBar elevation={0} position="fixed" className="new">
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </Box>

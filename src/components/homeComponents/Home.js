@@ -33,7 +33,7 @@ const Home = () => {
         imgSrc="/images/ibsa.JPG"
       />
       <Box component="div" className="homePage">
-        <Introduction className="homeIntroduction" />
+        <Introduction />
         <Container id="projects">
           {details.map((detail) => (
             <Projects

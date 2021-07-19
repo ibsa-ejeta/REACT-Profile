@@ -11,7 +11,7 @@ import {
 const Introduction = () => {
   return (
     <Box id="Home" component="div" className="homeIntroduction">
-      <Grid container spacing={3}>
+      <Grid container>
         <Grid item sm={12} md={5}>
           <Typography variant="h3">Ibsa Ejeta</Typography>
           <Typography variant="h5">a Web Developer</Typography>
@@ -23,7 +23,7 @@ const Introduction = () => {
           </Typography>
         </Grid>
         <Grid item sm={12} md={7}>
-          <img src="images/clipart.png" />
+          <img src="images/clipart.png" className="homeClipArt" />
         </Grid>
       </Grid>
     </Box>

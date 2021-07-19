@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "3rem",
     marginTop: "3rem",
     marginBottom: "5rem",
-    backgroundColor: "lightgreen",
+    backgroundColor: "yellow",
   },
 
   img: {
@@ -40,13 +40,21 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     alignItems: "center",
     borderStyle: "none",
-    backgroundColor: "lightgreen",
+    backgroundColor: "yellow",
     boxShadow: "none",
   },
   projectButton: {
     // justifyContent: "center",
     marginBottom: "2rem",
     marginRight: "2rem",
+    backgroundColor: "lightgreen",
+    color: "black",
+    textTransform: "lowercase",
+    fontWeight: "normal",
+    "&:hover": {
+      backgroundColor: "lightgreen",
+      color: "grey",
+    },
   },
 }));
 
@@ -108,7 +116,7 @@ const Projects = (props) => {
             color="primary"
             component="button"
           >
-            <GitHubIcon />
+            <GitHubIcon fontSize="small" />
             &nbsp;&nbsp;&nbsp;GitHub-Repo
           </Button>
         </Box>
@@ -129,6 +137,27 @@ const Projects = (props) => {
   );
   if (keys % 2 === 0 && windowDimensions.width > 960) {
     return (
+      <Box component="div" className="homeProjects">
+        <Paper justify="center" className={classes.homePaper} elevation={6}>
+          <Grid
+            component="div"
+            raised
+            container
+            alignItems="center"
+            alignContent="center"
+            direction="row"
+            md={12}
+            spacing={3}
+          >
+            {imageGrid} {textGrid}
+          </Grid>
+        </Paper>
+      </Box>
+    );
+  }
+
+  return (
+    <Box component="div" className="homeProjects">
       <Paper justify="center" className={classes.homePaper} elevation={6}>
         <Grid
           component="div"
@@ -140,27 +169,10 @@ const Projects = (props) => {
           md={12}
           spacing={3}
         >
-          {imageGrid} {textGrid}
+          {textGrid} {imageGrid}
         </Grid>
       </Paper>
-    );
-  }
-
-  return (
-    <Paper justify="center" className={classes.homePaper} elevation={6}>
-      <Grid
-        component="div"
-        raised
-        container
-        alignItems="center"
-        alignContent="center"
-        direction="row"
-        md={12}
-        spacing={3}
-      >
-        {textGrid} {imageGrid}
-      </Grid>
-    </Paper>
+    </Box>
   );
 };
 

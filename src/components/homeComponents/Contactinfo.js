@@ -22,9 +22,9 @@ const useStyles = makeStyles(() => ({
 const Contactinfo = () => {
   const classes = useStyles();
   return (
-    <Box component="div" id="contact">
-      <Typography variant="h2">Let's work together...</Typography>
-      <Typography variant="h3">
+    <Box component="div" id="contact" className="homeContact">
+      <Typography variant="h3">Let's work together...</Typography>
+      <Typography variant="h5">
         Available for full-time, part-time and freelance jobs
       </Typography>
 
